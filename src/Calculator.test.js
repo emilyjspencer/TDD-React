@@ -4,8 +4,11 @@ import Calculator from './Calculator';
 
 describe('Calculator', () => {
 
+  let wrapper;
+
+  beforeEach(() => wrapper = shallow(<Calculator />));
+
   it('should render a <div />', () => {
-      const wrapper = shallow(<Calculator />);
-      expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('div').length).toEqual(1)
   });
 });
